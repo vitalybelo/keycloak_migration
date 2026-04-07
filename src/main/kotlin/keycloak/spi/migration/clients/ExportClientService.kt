@@ -3,6 +3,7 @@ package keycloak.spi.migration.clients
 import jakarta.ws.rs.core.Response
 import keycloak.spi.migration.models.ClientExportDto
 import keycloak.spi.migration.models.ClientListExportDto
+import keycloak.spi.migration.utils.splitToList
 import org.jboss.logging.Logger
 import org.keycloak.authorization.AuthorizationProvider
 import org.keycloak.models.ClientModel
@@ -17,13 +18,13 @@ import org.keycloak.representations.idm.UserRepresentation
  * Внутренний SPI сервис по экспорту и импорту Clients
  * @author Belotserkovskii Vitalii (c) 2026
  */
-class InternalExportClientService(
+class ExportClientService(
     private val session: KeycloakSession,
     private val realm: RealmModel
 ) {
 
     companion object {
-        private val logger = Logger.getLogger(InternalExportClientService::class.java.name)
+        private val logger = Logger.getLogger(ExportClientService::class.java.name)
     }
     private val realmName = realm.name
 
@@ -42,7 +43,7 @@ class InternalExportClientService(
         logger.info(">>>> Procedure export clients in = [$clientIdsString] started")
         val exportList = ClientListExportDto()
 
-        getClientIds(clientIdsString).forEach { clientId ->
+        splitToList(clientIdsString).forEach { clientId ->
             try {
                 val clientModel = session.clients().getClientByClientId(realm, clientId)
                 if (clientModel == null) {
@@ -138,17 +139,6 @@ class InternalExportClientService(
         userRepresentation.groups = groups
 
         return userRepresentation
-    }
-
-
-
-    /**
-     * Возвращает список строк из переданной параметров запроса строки мульти значений.
-     * В строке перечислены названия сервисов или потоков, по которым нужно вернуть экспортные сущности
-     * @param multiValuedSting строка с именами сервисов, разделенные запятой
-     */
-    fun getClientIds(multiValuedSting: String): List<String> {
-        return multiValuedSting.split(",").map { it.trim() }.filter { it.isNotEmpty() }
     }
 
 }

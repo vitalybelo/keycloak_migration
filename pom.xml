@@ -44,14 +44,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--suppress VulnerableLibrariesLocal -->
-        <dependency>
-            <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-model-infinispan</artifactId>
-            <version>26.5.2</version>
-            <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>

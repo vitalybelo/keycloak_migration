@@ -9,13 +9,16 @@ import jakarta.ws.rs.Produces
 import jakarta.ws.rs.QueryParam
 import jakarta.ws.rs.core.MediaType
 import jakarta.ws.rs.core.Response
-import keycloak.spi.migration.clients.InternalExportClientService
-import keycloak.spi.migration.clients.InternalImportClientService
+import keycloak.spi.migration.clients.ExportClientService
+import keycloak.spi.migration.clients.ImportClientService
+import keycloak.spi.migration.flows.ExportAuthenticationFlows
+import keycloak.spi.migration.flows.ImportAuthenticationFlows
 import keycloak.spi.migration.groups.ExportGroupsService
 import keycloak.spi.migration.scopes.ClientScopeExportDto
 import keycloak.spi.migration.scopes.ImportClientScopeService
 import keycloak.spi.migration.groups.ImportGroupsService
 import keycloak.spi.migration.models.ClientListExportDto
+import keycloak.spi.migration.models.ExportFlowDto
 import keycloak.spi.migration.roles.ExportRealmRolesService
 import keycloak.spi.migration.roles.ImportRealmRolesService
 import keycloak.spi.migration.scopes.ExportClientScopeService
@@ -117,7 +120,7 @@ class MigrationAdminResource(
     ): Response {
 
         auth.clients().requireView()
-        val clientsService = InternalExportClientService(session, realm)
+        val clientsService = ExportClientService(session, realm)
         return clientsService.getRealmClients(clientIds)
     }
 
@@ -132,7 +135,35 @@ class MigrationAdminResource(
     ): Response {
 
         auth.clients().requireManage()
-        val clientsService = InternalImportClientService(session, realm, adminEventBuilder)
+        val clientsService = ImportClientService(session, realm, adminEventBuilder)
         return clientsService.createOrUpdateRealmClients(stamp, isAlwaysCreate, importedClients)
     }
+
+    @GET
+    @Path("/flows")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun getAuthenticationFlows(
+        @QueryParam("alias") alias: String?
+    ): Response {
+
+        auth.clients().requireView()
+        val authFlowExportService = ExportAuthenticationFlows(session, realm, auth, adminEventBuilder)
+        return authFlowExportService.getRealmAuthenticationFlow(alias)
+
+    }
+
+    @POST
+    @Path("/flows")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    fun createAuthenticationFlows(
+        @QueryParam("stamp") stamp: String?,
+        @RequestBody importedFlowDto: ExportFlowDto
+    ): Response {
+
+        auth.clients().requireManage()
+        val authFlowImportService = ImportAuthenticationFlows(session, auth, adminEventBuilder)
+        return authFlowImportService.createAuthenticationFlows(stamp, importedFlowDto)
+    }
+
 }
