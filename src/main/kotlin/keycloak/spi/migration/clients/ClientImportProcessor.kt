@@ -344,7 +344,7 @@ class ClientImportProcessor(
         val importedUserGroups = importedServiceAccount.groups ?: return
         val foundUserGroups = serviceAccountUserModel.groupsStream?.toList() ?: emptyList()
 
-        if (!importedUserGroups.isNullOrEmpty()) {
+        if (importedUserGroups.isNotEmpty()) {
             importedUserGroups.forEach { groupPath ->
 
                 val groupModel = KeycloakModelUtils.findGroupByPath(session, realm, groupPath)

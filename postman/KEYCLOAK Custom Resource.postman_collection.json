@@ -1,0 +1,2067 @@
+{
+  "info": {
+    "_postman_id": "bf009a25-69bd-40df-aaac-5ed0ced64fdd",
+    "name": "KEYCLOAK Custom Resource",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25432314"
+  },
+  "item": [
+    {
+      "name": "HELLO",
+      "item": [
+        {
+          "name": "GET Hello",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/custom_resources/hello",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "custom_resources",
+                "hello"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Hello Auth",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/custom_resources/hello-auth",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "custom_resources",
+                "hello-auth"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ADMIN DEMO",
+      "item": [
+        {
+          "name": "GET User List",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/list?page=2&max=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "max",
+                  "value": "5",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT User Attributes",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"attribute_number_1\": \"1\",\r\n    \"attribute_number_2\": \"2\",\r\n    \"attribute_number_3\": \"3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/attributes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "attributes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET User Login Failures",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/login-failures",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "login-failures"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL User Login Failures",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/login-failures",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "login-failures"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET User Login Attempt",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "password",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/login-attempt",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "login-attempt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DEL User Login Attempt",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "password",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/login-attempt",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "login-attempt"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST User Logout",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"attribute_number_1\": \"1\",\r\n    \"attribute_number_2\": \"2\",\r\n    \"attribute_number_3\": \"3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/admin-ext/users/db6e588f-ba15-4deb-93dd-0d64c9add75e/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "admin",
+                "realms",
+                "SpringBootKeycloak",
+                "admin-ext",
+                "users",
+                "db6e588f-ba15-4deb-93dd-0d64c9add75e",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "TRUSTED DEVICE",
+      "item": [
+        {
+          "name": "GET User Devices",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "password",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/trusted-devices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "trusted-devices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE User Device",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "password",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/trusted-devices/6883c9f5-f8f3-4cb8-8688-f16b505d6c7a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "trusted-devices",
+                "6883c9f5-f8f3-4cb8-8688-f16b505d6c7a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE User Devices",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "password",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "user",
+                  "type": "string"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "WbP46pdXfGG1Gmpw5sS859vL5NgLN2t4",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "login-web",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "client_authentication",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                },
+                {
+                  "key": "tokenName",
+                  "value": "keycloak bearer token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/trusted-devices/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "trusted-devices",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "MIGRATION",
+      "item": [
+        {
+          "name": "CLIENT SCOPES",
+          "item": [
+            {
+              "name": "GET Client Scopes",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/client-scopes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "client-scopes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Client Scopes",
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"clientScopes\": [\r\n        {\r\n            \"id\": \"acb63186-1f19-4619-bcc2-6be0ab2d55ee\",\r\n            \"name\": \"role_list\",\r\n            \"description\": \"SAML role list\",\r\n            \"protocol\": \"saml\",\r\n            \"attributes\": {\r\n                \"consent.screen.text\": \"${samlRoleListScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"f34f0c88-302d-4d02-8174-2e74da2a68f7\",\r\n                    \"name\": \"role list\",\r\n                    \"protocol\": \"saml\",\r\n                    \"protocolMapper\": \"saml-role-list-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"single\": \"false\",\r\n                        \"attribute.nameformat\": \"Basic\",\r\n                        \"attribute.name\": \"Role\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"e7e5bfcc-4c98-45b2-a5a0-2ac8cd0a518d\",\r\n            \"name\": \"department\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"8852c9d9-eb13-4f76-96d3-d45efa0bdf70\",\r\n                    \"name\": \"department\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"department\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"department\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"e054ac83-15f5-4cc2-95b3-cfa09441ad63\",\r\n            \"name\": \"phone\",\r\n            \"description\": \"OpenID Connect built-in scope: phone\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"consent.screen.text\": \"${phoneScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"4b04c2f7-cc6c-481c-a3f2-e878597d7f28\",\r\n                    \"name\": \"phone\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"phone\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"phone\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"47332a32-bf82-467b-b965-411c53942069\",\r\n            \"name\": \"group_attribute\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"8c377904-02dc-4f34-b0df-2d71505ab162\",\r\n                    \"name\": \"group_attribute\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"aggregate.attrs\": \"true\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"multivalued\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"group_attribute\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"group_attribute\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"99d4838c-b8a0-416c-b7b0-da8b2abfb206\",\r\n            \"name\": \"offline_access\",\r\n            \"description\": \"OpenID Connect built-in scope: offline_access\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"consent.screen.text\": \"${offlineAccessScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"3c7e82f4-9af2-4718-81f7-523d65e00ea5\",\r\n            \"name\": \"address\",\r\n            \"description\": \"OpenID Connect built-in scope: address\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"consent.screen.text\": \"${addressScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"50de605d-572d-403d-b7ab-d982b3557d83\",\r\n                    \"name\": \"address\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-address-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute.formatted\": \"formatted\",\r\n                        \"user.attribute.country\": \"country\",\r\n                        \"user.attribute.postal_code\": \"postal_code\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute.street\": \"street\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"user.attribute.region\": \"region\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"user.attribute.locality\": \"locality\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"58202ca6-aa5c-4834-8352-ddb788503e09\",\r\n            \"name\": \"profile\",\r\n            \"description\": \"OpenID Connect built-in scope: profile\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"consent.screen.text\": \"${profileScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"04812b8c-e6ca-4717-8783-ededfffc364c\",\r\n                    \"name\": \"full name\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-full-name-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"49f103bf-3577-40db-bd8a-4beed9bcf50a\",\r\n                    \"name\": \"Infinispan blocker\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"infinispan-lock-blocker-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {}\r\n                },\r\n                {\r\n                    \"id\": \"95466cbe-4796-4034-9c71-bc25016e6c03\",\r\n                    \"name\": \"middle name\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"middleName\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"middle_name\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"7a56b226-15dc-4ff7-991c-20689c041aeb\",\r\n                    \"name\": \"given name\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"firstName\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"given_name\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"46c1ea51-b248-49bb-b4ab-c90379e79e56\",\r\n                    \"name\": \"nickname\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"nickname\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"nickname\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"1c3c98a4-60ae-4f43-a310-6319e02189ff\",\r\n                    \"name\": \"family name\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"lastName\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"family_name\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"a2775a8e-98cd-4b8b-b7cc-69138644ed73\",\r\n                    \"name\": \"profile\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"profile\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"profile\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"c32c0d33-fa6d-432a-a6ff-60e4f9feb391\",\r\n                    \"name\": \"picture\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"picture\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"picture\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"c15f99fd-e821-4479-b706-d67e5574967f\",\r\n                    \"name\": \"gender\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"gender\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"gender\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"b9f8c507-5b6c-4343-8c41-578d4b617748\",\r\n                    \"name\": \"zoneinfo\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"zoneinfo\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"zoneinfo\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"e03f5c27-a78d-45ac-af80-094cb01265de\",\r\n                    \"name\": \"website\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"website\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"website\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"14c5034d-85cf-4f5b-ab90-564896402a52\",\r\n                    \"name\": \"locale\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"locale\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"locale\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"7f255aca-0f9c-4ec8-b88c-0023a0ec5b4a\",\r\n                    \"name\": \"username\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"username\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"preferred_username\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"76f4b07e-8c92-43a1-aa54-239cdeb8491b\",\r\n                    \"name\": \"updated at\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"updatedAt\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"updated_at\",\r\n                        \"jsonType.label\": \"long\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"aeca0755-1ead-446e-80ef-f376e77c5c8f\",\r\n                    \"name\": \"birthdate\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"birthdate\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"birthdate\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"bff39695-e5f8-4a53-9a36-8369656ade05\",\r\n            \"name\": \"web-origins\",\r\n            \"description\": \"OpenID Connect scope for add allowed web origins to the access token\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"false\",\r\n                \"consent.screen.text\": \"\",\r\n                \"display.on.consent.screen\": \"false\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"a4861e7c-5022-4b59-a9b0-673c625ff8fb\",\r\n                    \"name\": \"allowed web origins\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-allowed-origins-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {}\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"abd121fe-3799-4761-bfca-93bfe6134256\",\r\n            \"name\": \"required_2FA\",\r\n            \"description\": \"атрибут определяющий каким образом выполняется второй фактор\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"d4116167-84b2-4a83-a57d-4f293b3f0bba\",\r\n                    \"name\": \"required_2FA\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"required_2FA\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"required_2FA\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"cd50ecfb-aa78-4977-a21f-1bbc258a5d64\",\r\n            \"name\": \"enterTime\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"7d95df84-9e98-4f7a-bcad-c3d97214bedc\",\r\n                    \"name\": \"enterTime\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"enterTime\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"152e8755-db22-408b-b1ca-6c9e30e94653\",\r\n            \"name\": \"microprofile-jwt\",\r\n            \"description\": \"Microprofile - JWT built-in scope\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"false\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"c00ae2ba-02e5-4f2a-b117-19159425b0cd\",\r\n                    \"name\": \"groups\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-realm-role-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"multivalued\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"foo\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"groups\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"ed5f9d4f-b642-4fba-b4f3-3c1e52bc3be7\",\r\n                    \"name\": \"upn\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"username\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"upn\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"8c9d61fd-24c9-4f87-8abe-2c20dd181c11\",\r\n            \"name\": \"required_otp\",\r\n            \"description\": \"If is true - user should enter otp code into authentication flow\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"8b884916-5dcb-4ff4-bc30-4d6f7d5c8708\",\r\n                    \"name\": \"required_otp\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"required_otp\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"required_otp\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"89ee905b-ebfd-41f5-b2f3-385e78352ff8\",\r\n            \"name\": \"minimal-token-scope\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"false\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"5035a546-53ec-4f7d-9895-7afd46c5d762\",\r\n            \"name\": \"acr\",\r\n            \"description\": \"OpenID Connect scope for add acr (authentication context class reference) to the token\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"false\",\r\n                \"display.on.consent.screen\": \"false\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"2362239a-ec49-4156-8a36-a891a429130f\",\r\n                    \"name\": \"acr loa level\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-acr-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"23680906-0532-4a48-9a0c-498ef8fb65b2\",\r\n            \"name\": \"middle_name\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"24bb5ed4-f389-4f17-aae4-7043296524b2\",\r\n                    \"name\": \"middle_name\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"middle_name\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"middle_name\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"baf94934-f7eb-455a-af13-8f40010b1b31\",\r\n            \"name\": \"basic\",\r\n            \"description\": \"OpenID Connect scope for add all basic claims to the token\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"false\",\r\n                \"display.on.consent.screen\": \"false\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"10a88dc1-fc99-4e80-85bc-450c1498cdfc\",\r\n                    \"name\": \"auth_time\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usersessionmodel-note-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.session.note\": \"AUTH_TIME\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"auth_time\",\r\n                        \"jsonType.label\": \"long\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"ef8dca90-316e-4c4a-b54e-1ada6c8480d7\",\r\n                    \"name\": \"sub\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-sub-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"83c5261c-2eee-4453-8b0f-777c4c3b74f3\",\r\n            \"name\": \"roles\",\r\n            \"description\": \"OpenID Connect scope for add user roles to the access token\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"${rolesScopeConsentText}\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"44b7dc3a-7725-42cd-b03a-d98a5d9ad42c\",\r\n                    \"name\": \"realm roles\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-realm-role-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"false\",\r\n                        \"multivalued\": \"true\",\r\n                        \"user.attribute\": \"foo\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"realm_access.roles\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"cf90857c-f7f5-4c7c-8d08-837785a11685\",\r\n                    \"name\": \"audience resolve\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-audience-resolve-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {}\r\n                },\r\n                {\r\n                    \"id\": \"c9d310b4-bcf2-4c35-8f42-b2fa67ea00cb\",\r\n                    \"name\": \"client roles\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-client-role-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"false\",\r\n                        \"multivalued\": \"true\",\r\n                        \"user.attribute\": \"foo\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"resource_access.${client_id}.roles\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"4a7c401d-a407-488d-99be-d641f118e619\",\r\n            \"name\": \"service_account\",\r\n            \"description\": \"Specific scope for a client enabled for service accounts\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"false\",\r\n                \"display.on.consent.screen\": \"false\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"30d19e3d-8694-48a3-b7c8-c268d6bb1914\",\r\n                    \"name\": \"Client ID\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usersessionmodel-note-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.session.note\": \"client_id\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"client_id\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"68eb2b90-e6d5-4328-9ae1-d8940fd36614\",\r\n                    \"name\": \"Client Host\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usersessionmodel-note-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.session.note\": \"clientHost\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"clientHost\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"38879f97-013f-4955-9071-134c95ecfc24\",\r\n                    \"name\": \"Client IP Address\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usersessionmodel-note-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.session.note\": \"clientAddress\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"clientAddress\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"8467d1f7-8e15-4027-acf4-deb77903a9ed\",\r\n            \"name\": \"session_state\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"36ebc0b8-2a5b-476f-abe4-44ca9df28322\",\r\n                    \"name\": \"session_state\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-session-state-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"id.token.claim\": \"true\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"590379a2-ac72-462e-b914-6602120b98d9\",\r\n            \"name\": \"position\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"bb847c93-59ee-4525-9c6a-f12b8746f2f9\",\r\n                    \"name\": \"position\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"user.attribute\": \"position\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"position\",\r\n                        \"jsonType.label\": \"String\",\r\n                        \"userinfo.token.claim\": \"true\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"8e4e2539-ad06-4f17-aac9-9ab147919162\",\r\n            \"name\": \"email\",\r\n            \"description\": \"OpenID Connect built-in scope: email\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"consent.screen.text\": \"${emailScopeConsentText}\",\r\n                \"display.on.consent.screen\": \"true\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"883762a9-d2ce-4eac-8e1b-b561a98071f4\",\r\n                    \"name\": \"email\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"aggregate.attrs\": \"false\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"multivalued\": \"false\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"email\",\r\n                        \"lightweight.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"email\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": \"068c41f4-662c-46aa-8f10-bfe7b102472d\",\r\n                    \"name\": \"email verified\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-property-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"introspection.token.claim\": \"false\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"emailVerified\",\r\n                        \"lightweight.claim\": \"true\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"email_verified\",\r\n                        \"jsonType.label\": \"boolean\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"8134f269-6337-4cc9-8f16-4f1c3ec0016a\",\r\n            \"name\": \"abscustId\",\r\n            \"description\": \"\",\r\n            \"protocol\": \"openid-connect\",\r\n            \"attributes\": {\r\n                \"include.in.token.scope\": \"true\",\r\n                \"display.on.consent.screen\": \"true\",\r\n                \"gui.order\": \"\",\r\n                \"consent.screen.text\": \"\"\r\n            },\r\n            \"protocolMappers\": [\r\n                {\r\n                    \"id\": \"faba8832-14e4-4404-9a6e-06deea04688e\",\r\n                    \"name\": \"abscustId\",\r\n                    \"protocol\": \"openid-connect\",\r\n                    \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                    \"consentRequired\": false,\r\n                    \"config\": {\r\n                        \"aggregate.attrs\": \"false\",\r\n                        \"introspection.token.claim\": \"true\",\r\n                        \"multivalued\": \"false\",\r\n                        \"userinfo.token.claim\": \"true\",\r\n                        \"user.attribute\": \"abscustId\",\r\n                        \"lightweight.claim\": \"false\",\r\n                        \"id.token.claim\": \"true\",\r\n                        \"access.token.claim\": \"true\",\r\n                        \"claim.name\": \"abscust_id\",\r\n                        \"jsonType.label\": \"String\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"default\": [\r\n        \"required_2FA\",\r\n        \"enterTime\",\r\n        \"department\",\r\n        \"role_list\",\r\n        \"profile\",\r\n        \"email\",\r\n        \"web-origins\",\r\n        \"acr\",\r\n        \"position\",\r\n        \"phone\",\r\n        \"roles\",\r\n        \"basic\",\r\n        \"session_state\",\r\n        \"middle_name\",\r\n        \"group_attribute\",\r\n        \"abscustId\",\r\n        \"required_otp\"\r\n    ],\r\n    \"optional\": [\r\n        \"offline_access\",\r\n        \"address\",\r\n        \"microprofile-jwt\"\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak3/migrations/client-scopes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak3",
+                    "migrations",
+                    "client-scopes"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "REALM ROLES",
+          "item": [
+            {
+              "name": "GET Realm Roles",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/realm-roles",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "realm-roles"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Realm Roles",
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"id\": \"bb48c83a-17b7-4e8f-ab99-b4ff5692c2e9\",\r\n        \"name\": \"A1\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"639a9dbf-92d6-44d1-aca6-d3934a5e72f0\",\r\n        \"name\": \"AA1\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"23a4ca8c-0b67-4518-8820-f164dac86316\",\r\n        \"name\": \"A3\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"9138de9c-dd9b-410e-a4a8-700d3ac4d1d2\",\r\n        \"name\": \"AA3\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"5c5e9eef-a804-4e59-8178-36b177c38ca0\",\r\n        \"name\": \"A\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"3b252cb1-eaa0-4aef-bf08-b928e3bbd4e5\",\r\n        \"name\": \"REVIEWER\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"98ade805-4315-4529-a434-2d51c1b561ed\",\r\n        \"name\": \"A2\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"f6eb851d-f8a7-40c3-8de5-a79265732ff7\",\r\n        \"name\": \"AA2\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"ebbcedfd-3acd-4f70-81ca-5df8490fe018\",\r\n        \"name\": \"C\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"53c6ae84-361a-4fc8-a321-3334a8283de7\",\r\n        \"name\": \"ROOT\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"26d2ddf8-7ad8-4c59-abbb-5b413539545b\",\r\n        \"name\": \"ADMIN\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {\r\n            \"role_attribute\": [\r\n                \"111\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"id\": \"3343beb4-d668-4f50-be7e-adb79f786ee1\",\r\n        \"name\": \"USER\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"0415cf9b-c46f-406a-90e9-73547925e182\",\r\n        \"name\": \"CUSTOMER\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    },\r\n    {\r\n        \"id\": \"fedb7dbd-ae9e-4b1c-9de2-f34a6758502e\",\r\n        \"name\": \"B\",\r\n        \"description\": \"\",\r\n        \"composite\": false,\r\n        \"clientRole\": false,\r\n        \"containerId\": \"5260ffdf-6ad0-478a-827f-5fab67a3699b\",\r\n        \"attributes\": {}\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak3/migrations/realm-roles",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak3",
+                    "migrations",
+                    "realm-roles"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "GROUPS",
+          "item": [
+            {
+              "name": "GET Groups",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/groups",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "groups"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Groups",
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"id\": \"07286fb7-6403-49a8-9460-0b0b84e156ba\",\r\n        \"name\": \"customer\",\r\n        \"path\": \"/customer\",\r\n        \"subGroups\": [],\r\n        \"attributes\": {\r\n            \"group_attribute\": [\r\n                \"customer\"\r\n            ]\r\n        },\r\n        \"realmRoles\": [\r\n            \"CUSTOMER\"\r\n        ],\r\n        \"clientRoles\": {\r\n            \"login-web\": [\r\n                \"LOGIN_WEB_ROLE_2\",\r\n                \"LOGIN_WEB_ROLE_1\",\r\n                \"LOGIN_WEB_ROLE_3\"\r\n            ],\r\n            \"login-admin\": [\r\n                \"LOGIN_ADMIN_3\",\r\n                \"LOGIN_ADMIN_1\",\r\n                \"LOGIN_ADMIN_2\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"id\": \"582c6c90-f334-4baf-8674-a48587ad88c9\",\r\n        \"name\": \"group_root\",\r\n        \"path\": \"/group_root\",\r\n        \"subGroups\": [\r\n            {\r\n                \"id\": \"98cb74e3-344d-445e-a9c5-b2c190541c2b\",\r\n                \"name\": \"group_A\",\r\n                \"path\": \"/group_root/group_A\",\r\n                \"parentId\": \"582c6c90-f334-4baf-8674-a48587ad88c9\",\r\n                \"subGroups\": [\r\n                    {\r\n                        \"id\": \"9868f06b-9d22-4744-a04e-b2f0ada61fc4\",\r\n                        \"name\": \"group_A1\",\r\n                        \"path\": \"/group_root/group_A/group_A1\",\r\n                        \"parentId\": \"98cb74e3-344d-445e-a9c5-b2c190541c2b\",\r\n                        \"subGroups\": [\r\n                            {\r\n                                \"id\": \"f1875149-2d98-42cf-b442-d343eaa617f0\",\r\n                                \"name\": \"group_AA1\",\r\n                                \"path\": \"/group_root/group_A/group_A1/group_AA1\",\r\n                                \"parentId\": \"9868f06b-9d22-4744-a04e-b2f0ada61fc4\",\r\n                                \"subGroups\": [],\r\n                                \"attributes\": {\r\n                                    \"group_attribute\": [\r\n                                        \"group_AA1\"\r\n                                    ]\r\n                                },\r\n                                \"realmRoles\": [\r\n                                    \"AA1\"\r\n                                ],\r\n                                \"clientRoles\": {}\r\n                            },\r\n                            {\r\n                                \"id\": \"3f116def-fb25-4361-a5c8-015a3941c662\",\r\n                                \"name\": \"group_AA2\",\r\n                                \"path\": \"/group_root/group_A/group_A1/group_AA2\",\r\n                                \"parentId\": \"9868f06b-9d22-4744-a04e-b2f0ada61fc4\",\r\n                                \"subGroups\": [],\r\n                                \"attributes\": {\r\n                                    \"group_attribute\": [\r\n                                        \"group_AA2\"\r\n                                    ]\r\n                                },\r\n                                \"realmRoles\": [\r\n                                    \"AA2\"\r\n                                ],\r\n                                \"clientRoles\": {}\r\n                            },\r\n                            {\r\n                                \"id\": \"35e06e2d-650b-40f9-9d99-22dcf7fbed0d\",\r\n                                \"name\": \"group_AA3\",\r\n                                \"path\": \"/group_root/group_A/group_A1/group_AA3\",\r\n                                \"parentId\": \"9868f06b-9d22-4744-a04e-b2f0ada61fc4\",\r\n                                \"subGroups\": [],\r\n                                \"attributes\": {\r\n                                    \"group_attribute\": [\r\n                                        \"group_AA3\"\r\n                                    ]\r\n                                },\r\n                                \"realmRoles\": [\r\n                                    \"AA3\"\r\n                                ],\r\n                                \"clientRoles\": {}\r\n                            }\r\n                        ],\r\n                        \"attributes\": {\r\n                            \"group_attribute\": [\r\n                                \"group_A1\"\r\n                            ]\r\n                        },\r\n                        \"realmRoles\": [\r\n                            \"A1\"\r\n                        ],\r\n                        \"clientRoles\": {}\r\n                    },\r\n                    {\r\n                        \"id\": \"bced68ed-eb44-4d21-8fb5-105bb1944025\",\r\n                        \"name\": \"group_A2\",\r\n                        \"path\": \"/group_root/group_A/group_A2\",\r\n                        \"parentId\": \"98cb74e3-344d-445e-a9c5-b2c190541c2b\",\r\n                        \"subGroups\": [],\r\n                        \"attributes\": {\r\n                            \"group_attribute\": [\r\n                                \"group_A2\"\r\n                            ]\r\n                        },\r\n                        \"realmRoles\": [\r\n                            \"A2\"\r\n                        ],\r\n                        \"clientRoles\": {}\r\n                    },\r\n                    {\r\n                        \"id\": \"08ece9a7-690b-40a3-bbbc-c4cd9f8db794\",\r\n                        \"name\": \"group_A3\",\r\n                        \"path\": \"/group_root/group_A/group_A3\",\r\n                        \"parentId\": \"98cb74e3-344d-445e-a9c5-b2c190541c2b\",\r\n                        \"subGroups\": [],\r\n                        \"attributes\": {\r\n                            \"group_attribute\": [\r\n                                \"group_A3\"\r\n                            ]\r\n                        },\r\n                        \"realmRoles\": [\r\n                            \"A3\"\r\n                        ],\r\n                        \"clientRoles\": {}\r\n                    }\r\n                ],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"group_A\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [\r\n                    \"A\"\r\n                ],\r\n                \"clientRoles\": {}\r\n            },\r\n            {\r\n                \"id\": \"75c2403e-5347-4625-90da-c75ab8a43adb\",\r\n                \"name\": \"group_B\",\r\n                \"path\": \"/group_root/group_B\",\r\n                \"parentId\": \"582c6c90-f334-4baf-8674-a48587ad88c9\",\r\n                \"subGroups\": [],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"group_B\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [\r\n                    \"B\"\r\n                ],\r\n                \"clientRoles\": {}\r\n            },\r\n            {\r\n                \"id\": \"8e378be7-f22b-4718-a730-7e83c61f33a2\",\r\n                \"name\": \"group_C\",\r\n                \"path\": \"/group_root/group_C\",\r\n                \"parentId\": \"582c6c90-f334-4baf-8674-a48587ad88c9\",\r\n                \"subGroups\": [],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"group_C\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [\r\n                    \"C\"\r\n                ],\r\n                \"clientRoles\": {}\r\n            }\r\n        ],\r\n        \"attributes\": {\r\n            \"group_attribute\": [\r\n                \"group_root\"\r\n            ]\r\n        },\r\n        \"realmRoles\": [\r\n            \"ROOT\"\r\n        ],\r\n        \"clientRoles\": {}\r\n    },\r\n    {\r\n        \"id\": \"b6c1bf28-ba55-423c-99f0-3833b3762cf8\",\r\n        \"name\": \"root_parent\",\r\n        \"description\": \"\",\r\n        \"path\": \"/root_parent\",\r\n        \"subGroups\": [\r\n            {\r\n                \"id\": \"fa13b396-d2d3-4d6a-a04b-61afbcb6bba8\",\r\n                \"name\": \"child_1\",\r\n                \"path\": \"/root_parent/child_1\",\r\n                \"parentId\": \"b6c1bf28-ba55-423c-99f0-3833b3762cf8\",\r\n                \"subGroups\": [],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"child_1\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [],\r\n                \"clientRoles\": {}\r\n            },\r\n            {\r\n                \"id\": \"bed4e2a8-4600-46f3-85bc-bd92711e37cb\",\r\n                \"name\": \"child_2\",\r\n                \"path\": \"/root_parent/child_2\",\r\n                \"parentId\": \"b6c1bf28-ba55-423c-99f0-3833b3762cf8\",\r\n                \"subGroups\": [],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"child_2\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [],\r\n                \"clientRoles\": {}\r\n            },\r\n            {\r\n                \"id\": \"17a99a25-7a04-4b0a-baea-c4baef349ac8\",\r\n                \"name\": \"child_3\",\r\n                \"path\": \"/root_parent/child_3\",\r\n                \"parentId\": \"b6c1bf28-ba55-423c-99f0-3833b3762cf8\",\r\n                \"subGroups\": [],\r\n                \"attributes\": {\r\n                    \"group_attribute\": [\r\n                        \"child_3\"\r\n                    ]\r\n                },\r\n                \"realmRoles\": [],\r\n                \"clientRoles\": {}\r\n            }\r\n        ],\r\n        \"attributes\": {\r\n            \"group_attribute\": [\r\n                \"root_parent\"\r\n            ]\r\n        },\r\n        \"realmRoles\": [],\r\n        \"clientRoles\": {\r\n            \"gateway\": [\r\n                \"gateway_role_3\",\r\n                \"gateway_role_1\",\r\n                \"gateway_role_2\"\r\n            ]\r\n        }\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak3/migrations/groups",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak3",
+                    "migrations",
+                    "groups"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CLIENTS",
+          "item": [
+            {
+              "name": "GET Clients",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/clients?client_ids=gateway",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "clients"
+                  ],
+                  "query": [
+                    {
+                      "key": "client_ids",
+                      "value": "gateway"
+                    },
+                    {
+                      "key": "temp",
+                      "value": "login-admin, login-web, gateway",
+                      "type": "text",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Clients",
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"successExported\": [\r\n        \"gateway\"\r\n    ],\r\n    \"notFound\": [],\r\n    \"clients\": [\r\n        {\r\n            \"clientRepresentation\": {\r\n                \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                \"clientId\": \"gateway\",\r\n                \"name\": \"\",\r\n                \"description\": \"\",\r\n                \"rootUrl\": \"\",\r\n                \"adminUrl\": \"\",\r\n                \"baseUrl\": \"\",\r\n                \"surrogateAuthRequired\": false,\r\n                \"enabled\": true,\r\n                \"alwaysDisplayInConsole\": false,\r\n                \"clientAuthenticatorType\": \"client-secret\",\r\n                \"secret\": \"TZ1FlxJFYCsMiWMxojdNnz76dMyGQUb7\",\r\n                \"redirectUris\": [\r\n                    \"/*\"\r\n                ],\r\n                \"webOrigins\": [\r\n                    \"/*\"\r\n                ],\r\n                \"notBefore\": 0,\r\n                \"bearerOnly\": false,\r\n                \"consentRequired\": false,\r\n                \"standardFlowEnabled\": false,\r\n                \"implicitFlowEnabled\": false,\r\n                \"directAccessGrantsEnabled\": true,\r\n                \"serviceAccountsEnabled\": true,\r\n                \"authorizationServicesEnabled\": true,\r\n                \"publicClient\": false,\r\n                \"frontchannelLogout\": true,\r\n                \"protocol\": \"openid-connect\",\r\n                \"attributes\": {\r\n                    \"realm_client\": \"false\",\r\n                    \"oidc.ciba.grant.enabled\": \"false\",\r\n                    \"client.secret.creation.time\": \"1759304606\",\r\n                    \"backchannel.logout.session.required\": \"true\",\r\n                    \"standard.token.exchange.enabled\": \"false\",\r\n                    \"frontchannel.logout.session.required\": \"true\",\r\n                    \"post.logout.redirect.uris\": \"+\",\r\n                    \"oauth2.device.authorization.grant.enabled\": \"false\",\r\n                    \"display.on.consent.screen\": \"false\",\r\n                    \"backchannel.logout.revoke.offline.tokens\": \"false\",\r\n                    \"dpop.bound.access.tokens\": \"false\"\r\n                },\r\n                \"authenticationFlowBindingOverrides\": {},\r\n                \"fullScopeAllowed\": true,\r\n                \"nodeReRegistrationTimeout\": -1,\r\n                \"protocolMappers\": [\r\n                    {\r\n                        \"id\": \"79ef9fc6-09ae-4cfa-8b31-461ab49477c4\",\r\n                        \"name\": \"position\",\r\n                        \"protocol\": \"openid-connect\",\r\n                        \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                        \"consentRequired\": false,\r\n                        \"config\": {\r\n                            \"introspection.token.claim\": \"true\",\r\n                            \"userinfo.token.claim\": \"true\",\r\n                            \"user.attribute\": \"position\",\r\n                            \"id.token.claim\": \"true\",\r\n                            \"lightweight.claim\": \"false\",\r\n                            \"access.token.claim\": \"true\",\r\n                            \"claim.name\": \"position\",\r\n                            \"jsonType.label\": \"String\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"id\": \"263a7bb2-4ca8-4259-b149-8a1c02e0097a\",\r\n                        \"name\": \"enterTime\",\r\n                        \"protocol\": \"openid-connect\",\r\n                        \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                        \"consentRequired\": false,\r\n                        \"config\": {\r\n                            \"introspection.token.claim\": \"true\",\r\n                            \"userinfo.token.claim\": \"true\",\r\n                            \"user.attribute\": \"enterTime\",\r\n                            \"id.token.claim\": \"true\",\r\n                            \"lightweight.claim\": \"false\",\r\n                            \"access.token.claim\": \"true\",\r\n                            \"claim.name\": \"enter_time\",\r\n                            \"jsonType.label\": \"String\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"id\": \"d074b0a0-49c9-47be-b27e-875fb3e1d762\",\r\n                        \"name\": \"phone\",\r\n                        \"protocol\": \"openid-connect\",\r\n                        \"protocolMapper\": \"oidc-usermodel-attribute-mapper\",\r\n                        \"consentRequired\": false,\r\n                        \"config\": {\r\n                            \"introspection.token.claim\": \"true\",\r\n                            \"userinfo.token.claim\": \"true\",\r\n                            \"user.attribute\": \"phone\",\r\n                            \"id.token.claim\": \"true\",\r\n                            \"lightweight.claim\": \"false\",\r\n                            \"access.token.claim\": \"true\",\r\n                            \"claim.name\": \"phone\",\r\n                            \"jsonType.label\": \"String\"\r\n                        }\r\n                    }\r\n                ],\r\n                \"defaultClientScopes\": [\r\n                    \"service_account\",\r\n                    \"abscustId\",\r\n                    \"profile\",\r\n                    \"roles\",\r\n                    \"middle_name\",\r\n                    \"web-origins\",\r\n                    \"acr\",\r\n                    \"phone\",\r\n                    \"position\",\r\n                    \"basic\",\r\n                    \"session_state\",\r\n                    \"group_attribute\",\r\n                    \"enterTime\",\r\n                    \"email\"\r\n                ],\r\n                \"optionalClientScopes\": [\r\n                    \"address\",\r\n                    \"offline_access\",\r\n                    \"microprofile-jwt\"\r\n                ],\r\n                \"authorizationSettings\": {\r\n                    \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"clientId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"name\": \"gateway\",\r\n                    \"allowRemoteResourceManagement\": true,\r\n                    \"policyEnforcementMode\": \"ENFORCING\",\r\n                    \"resources\": [\r\n                        {\r\n                            \"name\": \"ms-keycloak-adp-user\",\r\n                            \"type\": \"ms\",\r\n                            \"owner\": {\r\n                                \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                                \"name\": \"gateway\"\r\n                            },\r\n                            \"ownerManagedAccess\": false,\r\n                            \"displayName\": \"ms-keycloak-adp-user\",\r\n                            \"attributes\": {},\r\n                            \"_id\": \"5596bf7c-5fe5-420b-a249-d07d9e18bd96\",\r\n                            \"uris\": [\r\n                                \"/keycloak/users/create\",\r\n                                \"/keycloak/users/{id}\",\r\n                                \"/keycloak/users/delete\",\r\n                                \"/keycloak/users/update\"\r\n                            ],\r\n                            \"scopes\": [\r\n                                {\r\n                                    \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                                    \"name\": \"DELETE\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                                    \"name\": \"GET\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                                    \"name\": \"POST\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                                    \"name\": \"PUT\",\r\n                                    \"iconUri\": \"\"\r\n                                }\r\n                            ],\r\n                            \"icon_uri\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"ms-keycloak-adp-clients\",\r\n                            \"type\": \"ms\",\r\n                            \"owner\": {\r\n                                \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                                \"name\": \"gateway\"\r\n                            },\r\n                            \"ownerManagedAccess\": false,\r\n                            \"displayName\": \"ms-keycloak-adp-clients\",\r\n                            \"attributes\": {},\r\n                            \"_id\": \"2e772e85-fde0-44f0-8712-9d8bd936e182\",\r\n                            \"uris\": [\r\n                                \"/keycloak/clients/put\",\r\n                                \"/keycloak/clients/{id}\",\r\n                                \"/keycloak/clients/create\",\r\n                                \"/keycloak/clients/delete\"\r\n                            ],\r\n                            \"scopes\": [\r\n                                {\r\n                                    \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                                    \"name\": \"DELETE\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                                    \"name\": \"GET\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                                    \"name\": \"POST\",\r\n                                    \"iconUri\": \"\"\r\n                                },\r\n                                {\r\n                                    \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                                    \"name\": \"PUT\",\r\n                                    \"iconUri\": \"\"\r\n                                }\r\n                            ],\r\n                            \"icon_uri\": \"\"\r\n                        }\r\n                    ],\r\n                    \"policies\": [\r\n                        {\r\n                            \"id\": \"962b2095-17a2-47e1-848d-2a2a4e6f5553\",\r\n                            \"name\": \"Auth level 2\",\r\n                            \"description\": \"\",\r\n                            \"type\": \"role\",\r\n                            \"logic\": \"POSITIVE\",\r\n                            \"decisionStrategy\": \"UNANIMOUS\",\r\n                            \"config\": {\r\n                                \"fetchRoles\": \"false\",\r\n                                \"roles\": \"[]\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"id\": \"76789470-8b94-4e68-8d05-c3aab031cd08\",\r\n                            \"name\": \"Permission level 2\",\r\n                            \"description\": \"Permission level 2 (ON)\",\r\n                            \"type\": \"resource\",\r\n                            \"logic\": \"POSITIVE\",\r\n                            \"decisionStrategy\": \"UNANIMOUS\",\r\n                            \"config\": {}\r\n                        },\r\n                        {\r\n                            \"id\": \"1ae6a883-292b-4747-9791-6f4c21d3de8e\",\r\n                            \"name\": \"Auth level 1\",\r\n                            \"description\": \"\",\r\n                            \"type\": \"role\",\r\n                            \"logic\": \"POSITIVE\",\r\n                            \"decisionStrategy\": \"UNANIMOUS\",\r\n                            \"config\": {\r\n                                \"fetchRoles\": \"false\",\r\n                                \"roles\": \"[]\"\r\n                            }\r\n                        },\r\n                        {\r\n                            \"id\": \"5b089df6-79ac-4b33-b1a3-c546e27ed8b5\",\r\n                            \"name\": \"Permission level 1\",\r\n                            \"description\": \"Permission level 1 (ON)\",\r\n                            \"type\": \"resource\",\r\n                            \"logic\": \"POSITIVE\",\r\n                            \"decisionStrategy\": \"UNANIMOUS\",\r\n                            \"config\": {\r\n                                \"defaultResourceType\": \"\"\r\n                            }\r\n                        }\r\n                    ],\r\n                    \"scopes\": [\r\n                        {\r\n                            \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                            \"name\": \"GET\",\r\n                            \"iconUri\": \"\"\r\n                        },\r\n                        {\r\n                            \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                            \"name\": \"POST\",\r\n                            \"iconUri\": \"\"\r\n                        },\r\n                        {\r\n                            \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                            \"name\": \"PUT\",\r\n                            \"iconUri\": \"\"\r\n                        },\r\n                        {\r\n                            \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                            \"name\": \"DELETE\",\r\n                            \"iconUri\": \"\"\r\n                        }\r\n                    ],\r\n                    \"decisionStrategy\": \"UNANIMOUS\"\r\n                }\r\n            },\r\n            \"serviceAccountUser\": {\r\n                \"id\": \"88e7f24f-0f94-428a-b1c2-336f0794e878\",\r\n                \"username\": \"service-account-gateway\",\r\n                \"emailVerified\": false,\r\n                \"enabled\": true,\r\n                \"createdTimestamp\": 1764165341057,\r\n                \"totp\": false,\r\n                \"disableableCredentialTypes\": [],\r\n                \"requiredActions\": [],\r\n                \"realmRoles\": [\r\n                    \"default-roles-springbootkeycloak\"\r\n                ],\r\n                \"clientRoles\": {},\r\n                \"notBefore\": 0,\r\n                \"groups\": []\r\n            },\r\n            \"clientRoles\": [\r\n                {\r\n                    \"id\": \"72e9ba2d-29ef-43f8-8f5f-3e7462526668\",\r\n                    \"name\": \"gateway_role_3\",\r\n                    \"description\": \"\",\r\n                    \"composite\": false,\r\n                    \"clientRole\": true,\r\n                    \"containerId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"attributes\": {}\r\n                },\r\n                {\r\n                    \"id\": \"03becf6b-cd90-4c3f-ad75-ae91554a162d\",\r\n                    \"name\": \"uma_protection\",\r\n                    \"composite\": false,\r\n                    \"clientRole\": true,\r\n                    \"containerId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"attributes\": {}\r\n                },\r\n                {\r\n                    \"id\": \"b03d4bbe-a6f1-4d2c-a40b-438a5628f8ba\",\r\n                    \"name\": \"gateway_role_1\",\r\n                    \"description\": \"\",\r\n                    \"composite\": false,\r\n                    \"clientRole\": true,\r\n                    \"containerId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"attributes\": {}\r\n                },\r\n                {\r\n                    \"id\": \"0d843e72-dc32-4fd2-99a7-0bb2c63512e6\",\r\n                    \"name\": \"gateway_role_2\",\r\n                    \"description\": \"\",\r\n                    \"composite\": false,\r\n                    \"clientRole\": true,\r\n                    \"containerId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                    \"attributes\": {}\r\n                }\r\n            ],\r\n            \"exportSettings\": {\r\n                \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                \"clientId\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                \"name\": \"gateway\",\r\n                \"allowRemoteResourceManagement\": true,\r\n                \"policyEnforcementMode\": \"ENFORCING\",\r\n                \"resources\": [\r\n                    {\r\n                        \"name\": \"ms-keycloak-adp-user\",\r\n                        \"type\": \"ms\",\r\n                        \"owner\": {\r\n                            \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                            \"name\": \"gateway\"\r\n                        },\r\n                        \"ownerManagedAccess\": false,\r\n                        \"displayName\": \"ms-keycloak-adp-user\",\r\n                        \"attributes\": {},\r\n                        \"_id\": \"5596bf7c-5fe5-420b-a249-d07d9e18bd96\",\r\n                        \"uris\": [\r\n                            \"/keycloak/users/create\",\r\n                            \"/keycloak/users/{id}\",\r\n                            \"/keycloak/users/delete\",\r\n                            \"/keycloak/users/update\"\r\n                        ],\r\n                        \"scopes\": [\r\n                            {\r\n                                \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                                \"name\": \"DELETE\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                                \"name\": \"GET\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                                \"name\": \"POST\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                                \"name\": \"PUT\",\r\n                                \"iconUri\": \"\"\r\n                            }\r\n                        ],\r\n                        \"icon_uri\": \"\"\r\n                    },\r\n                    {\r\n                        \"name\": \"ms-keycloak-adp-clients\",\r\n                        \"type\": \"ms\",\r\n                        \"owner\": {\r\n                            \"id\": \"ab6ccad3-2731-4c97-a974-9a2f8a93d695\",\r\n                            \"name\": \"gateway\"\r\n                        },\r\n                        \"ownerManagedAccess\": false,\r\n                        \"displayName\": \"ms-keycloak-adp-clients\",\r\n                        \"attributes\": {},\r\n                        \"_id\": \"2e772e85-fde0-44f0-8712-9d8bd936e182\",\r\n                        \"uris\": [\r\n                            \"/keycloak/clients/put\",\r\n                            \"/keycloak/clients/{id}\",\r\n                            \"/keycloak/clients/create\",\r\n                            \"/keycloak/clients/delete\"\r\n                        ],\r\n                        \"scopes\": [\r\n                            {\r\n                                \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                                \"name\": \"DELETE\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                                \"name\": \"GET\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                                \"name\": \"POST\",\r\n                                \"iconUri\": \"\"\r\n                            },\r\n                            {\r\n                                \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                                \"name\": \"PUT\",\r\n                                \"iconUri\": \"\"\r\n                            }\r\n                        ],\r\n                        \"icon_uri\": \"\"\r\n                    }\r\n                ],\r\n                \"policies\": [\r\n                    {\r\n                        \"id\": \"962b2095-17a2-47e1-848d-2a2a4e6f5553\",\r\n                        \"name\": \"Auth level 2\",\r\n                        \"description\": \"\",\r\n                        \"type\": \"role\",\r\n                        \"logic\": \"POSITIVE\",\r\n                        \"decisionStrategy\": \"UNANIMOUS\",\r\n                        \"config\": {\r\n                            \"fetchRoles\": \"false\",\r\n                            \"roles\": \"[]\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"id\": \"76789470-8b94-4e68-8d05-c3aab031cd08\",\r\n                        \"name\": \"Permission level 2\",\r\n                        \"description\": \"Permission level 2 (ON)\",\r\n                        \"type\": \"resource\",\r\n                        \"logic\": \"POSITIVE\",\r\n                        \"decisionStrategy\": \"UNANIMOUS\",\r\n                        \"config\": {}\r\n                    },\r\n                    {\r\n                        \"id\": \"1ae6a883-292b-4747-9791-6f4c21d3de8e\",\r\n                        \"name\": \"Auth level 1\",\r\n                        \"description\": \"\",\r\n                        \"type\": \"role\",\r\n                        \"logic\": \"POSITIVE\",\r\n                        \"decisionStrategy\": \"UNANIMOUS\",\r\n                        \"config\": {\r\n                            \"fetchRoles\": \"false\",\r\n                            \"roles\": \"[]\"\r\n                        }\r\n                    },\r\n                    {\r\n                        \"id\": \"5b089df6-79ac-4b33-b1a3-c546e27ed8b5\",\r\n                        \"name\": \"Permission level 1\",\r\n                        \"description\": \"Permission level 1 (ON)\",\r\n                        \"type\": \"resource\",\r\n                        \"logic\": \"POSITIVE\",\r\n                        \"decisionStrategy\": \"UNANIMOUS\",\r\n                        \"config\": {\r\n                            \"defaultResourceType\": \"\"\r\n                        }\r\n                    }\r\n                ],\r\n                \"scopes\": [\r\n                    {\r\n                        \"id\": \"2b4a15ba-43ba-481d-83db-24ffcfc3c66d\",\r\n                        \"name\": \"GET\",\r\n                        \"iconUri\": \"\"\r\n                    },\r\n                    {\r\n                        \"id\": \"28d8330d-b8ff-43e5-b706-d20e0e0d49f6\",\r\n                        \"name\": \"POST\",\r\n                        \"iconUri\": \"\"\r\n                    },\r\n                    {\r\n                        \"id\": \"efc3a7ba-480a-4316-a361-f307b2574b8e\",\r\n                        \"name\": \"PUT\",\r\n                        \"iconUri\": \"\"\r\n                    },\r\n                    {\r\n                        \"id\": \"02560532-7aee-409c-a27a-34884aeb7d83\",\r\n                        \"name\": \"DELETE\",\r\n                        \"iconUri\": \"\"\r\n                    }\r\n                ],\r\n                \"decisionStrategy\": \"UNANIMOUS\"\r\n            }\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak3/migrations/clients?stamp=R38",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak3",
+                    "migrations",
+                    "clients"
+                  ],
+                  "query": [
+                    {
+                      "key": "stamp",
+                      "value": "R38"
+                    },
+                    {
+                      "key": "isAlwaysCreate",
+                      "value": "true",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "AUTH FLOWS",
+          "item": [
+            {
+              "name": "GET Auth Flows",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/flows?alias=Browser Username Password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "flows"
+                  ],
+                  "query": [
+                    {
+                      "key": "alias",
+                      "value": "Browser Username Password"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST Auth Flows",
+              "request": {
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "password",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "username",
+                      "value": "admin",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientSecret",
+                      "value": "",
+                      "type": "string"
+                    },
+                    {
+                      "key": "clientId",
+                      "value": "admin-cli",
+                      "type": "string"
+                    },
+                    {
+                      "key": "accessTokenUrl",
+                      "value": "http://localhost:8443/realms/master/protocol/openid-connect/token",
+                      "type": "string"
+                    },
+                    {
+                      "key": "scope",
+                      "value": "openid",
+                      "type": "string"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "password_credentials",
+                      "type": "string"
+                    },
+                    {
+                      "key": "client_authentication",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "addTokenTo",
+                      "value": "header",
+                      "type": "string"
+                    },
+                    {
+                      "key": "tokenName",
+                      "value": "keycloak bearer token",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"totalRootFlows\": 1,\r\n    \"totalFlows\": 6,\r\n    \"totalConfigurations\": 13,\r\n    \"authenticationFlows\": [\r\n        {\r\n            \"id\": \"071f7e5d-91ed-43e8-922d-058e9dca3053\",\r\n            \"alias\": \"Browser Username Password\",\r\n            \"description\": \"browser based authentication\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": true,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Cookie config\",\r\n                    \"authenticator\": \"auth-cookie\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"ALTERNATIVE\",\r\n                    \"priority\": 26,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Kerberos config\",\r\n                    \"authenticator\": \"auth-spnego\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"ALTERNATIVE\",\r\n                    \"priority\": 27,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Identity Provider Redirector config\",\r\n                    \"authenticator\": \"identity-provider-redirector\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"ALTERNATIVE\",\r\n                    \"priority\": 34,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Username - Password - OTP - Form config\",\r\n                    \"authenticatorFlow\": true,\r\n                    \"requirement\": \"ALTERNATIVE\",\r\n                    \"priority\": 35,\r\n                    \"autheticatorFlow\": true,\r\n                    \"flowAlias\": \"FORMS - Username - Password - 2FA\",\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"9c4865e4-e77d-4f8c-9876-09f48dd4c2b1\",\r\n            \"alias\": \"FORMS - Username - Password - 2FA\",\r\n            \"description\": \"\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": false,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Username Form config\",\r\n                    \"authenticator\": \"auth-username-form\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 2,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Username Login Limiter config\",\r\n                    \"authenticator\": \"username_blocking_execution\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 10,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Password Form and 2FA conditional Forms config\",\r\n                    \"authenticatorFlow\": true,\r\n                    \"requirement\": \"CONDITIONAL\",\r\n                    \"priority\": 11,\r\n                    \"autheticatorFlow\": true,\r\n                    \"flowAlias\": \"Password Form and 2FA conditional Forms\",\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"bee0088b-5d4f-43e1-bf24-08111c622185\",\r\n            \"alias\": \"Password Form and 2FA conditional Forms\",\r\n            \"description\": \"\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": false,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Condition - user role config\",\r\n                    \"authenticator\": \"conditional-user-role\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 1,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Password Form Brute Force Locker configuration\",\r\n                    \"authenticator\": \"password_brute_force_locker\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 2,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Enter Time Attribute Logic config\",\r\n                    \"authenticator\": \"enter_timer_logics\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 7,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Browser 2FA SMS config\",\r\n                    \"authenticatorFlow\": true,\r\n                    \"requirement\": \"CONDITIONAL\",\r\n                    \"priority\": 8,\r\n                    \"autheticatorFlow\": true,\r\n                    \"flowAlias\": \"Browser 2FA SMS \",\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorFlow\": true,\r\n                    \"requirement\": \"CONDITIONAL\",\r\n                    \"priority\": 9,\r\n                    \"autheticatorFlow\": true,\r\n                    \"flowAlias\": \"Browser 2FA Application\",\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorFlow\": true,\r\n                    \"requirement\": \"CONDITIONAL\",\r\n                    \"priority\": 10,\r\n                    \"autheticatorFlow\": true,\r\n                    \"flowAlias\": \"Browser 2FA Telegram\",\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"75d1ba86-cc35-4a5e-96cf-70e0fa8c8ae7\",\r\n            \"alias\": \"Browser 2FA SMS \",\r\n            \"description\": \"\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": false,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Condition - check user attribute config\",\r\n                    \"authenticator\": \"check_attribute_condition\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 3,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"2FA SMS Authentication config\",\r\n                    \"authenticator\": \"sms_2fa_authentication\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 4,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"6c7e09c3-61a0-447f-a978-596ff434e70d\",\r\n            \"alias\": \"Browser 2FA Application\",\r\n            \"description\": \"\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": false,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Condition - check user attribute config Application\",\r\n                    \"authenticator\": \"check_attribute_condition\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 0,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticator\": \"auth-otp-form\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 2,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": \"50be3554-7193-4865-add4-d5f2a03c7b84\",\r\n            \"alias\": \"Browser 2FA Telegram\",\r\n            \"description\": \"\",\r\n            \"providerId\": \"basic-flow\",\r\n            \"topLevel\": false,\r\n            \"builtIn\": false,\r\n            \"authenticationExecutions\": [\r\n                {\r\n                    \"authenticatorConfig\": \"Condition - check user attribute config Telegram\",\r\n                    \"authenticator\": \"check_attribute_condition\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 0,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                },\r\n                {\r\n                    \"authenticatorConfig\": \"Telegram 2FA config\",\r\n                    \"authenticator\": \"telegram-authenticator\",\r\n                    \"authenticatorFlow\": false,\r\n                    \"requirement\": \"REQUIRED\",\r\n                    \"priority\": 1,\r\n                    \"autheticatorFlow\": false,\r\n                    \"userSetupAllowed\": false\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"authenticatorConfigs\": [\r\n        {\r\n            \"id\": \"8202bba9-05cb-4e7d-9a99-5bafc6607010\",\r\n            \"alias\": \"Cookie config\",\r\n            \"config\": {}\r\n        },\r\n        {\r\n            \"id\": \"9412f2bc-e6db-4c5b-beb9-705ccb9efaa4\",\r\n            \"alias\": \"Kerberos config\",\r\n            \"config\": {}\r\n        },\r\n        {\r\n            \"id\": \"48fbe0f6-24d5-4dfe-a1bb-2f5b6408b89a\",\r\n            \"alias\": \"Identity Provider Redirector config\",\r\n            \"config\": {}\r\n        },\r\n        {\r\n            \"id\": \"394bcc0f-2639-428b-a507-309c04f81303\",\r\n            \"alias\": \"Username Form config\",\r\n            \"config\": {}\r\n        },\r\n        {\r\n            \"id\": \"30443e33-80a7-4307-a64b-d8c5f666d606\",\r\n            \"alias\": \"Username Login Limiter config\",\r\n            \"config\": {\r\n                \"Check_toggle\": \"true\",\r\n                \"blocking_username_list\": \"nikola\",\r\n                \"Username_prohibited\": \"nikola\",\r\n                \"blocking_switch\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"b2a429c8-40b6-4092-bcc5-2e0ab3be5305\",\r\n            \"alias\": \"Condition - user role config\",\r\n            \"config\": {\r\n                \"condUserRole\": \"ADMIN\",\r\n                \"negate\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"3e899713-5659-4ac9-badf-516324de949d\",\r\n            \"alias\": \"Password Form Brute Force Locker configuration\",\r\n            \"config\": {\r\n                \"block_minutes\": \"10\",\r\n                \"brute_force_switch\": \"true\",\r\n                \"max_failures\": \"5\",\r\n                \"critical_block\": \"20\",\r\n                \"critical_window\": \"1\",\r\n                \"quick_login_interval\": \"500\",\r\n                \"quick_block_minutes\": \"1\",\r\n                \"reset_minutes\": \"60\",\r\n                \"critical_failures\": \"10\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"32cf0073-2596-4051-9488-384efc9a22a3\",\r\n            \"alias\": \"Enter Time Attribute Logic config\",\r\n            \"config\": {\r\n                \"30\": \"30\",\r\n                \"enter_time_switch\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"43ac6af3-417f-4794-a7e8-004d1ac15526\",\r\n            \"alias\": \"Condition - check user attribute config\",\r\n            \"config\": {\r\n                \"attribute_name\": \"required_2FA\",\r\n                \"attribute_value\": \"SMS##СМС\",\r\n                \"native_enabled\": \"false\",\r\n                \"attribute_groups_enabled\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"18244093-8d4f-44dd-9dbf-54c6a1c29643\",\r\n            \"alias\": \"2FA SMS Authentication config\",\r\n            \"config\": {\r\n                \"sms_stub_code\": \"1111\",\r\n                \"sms_code_ttl\": \"60\",\r\n                \"sms_stub_length\": \"4\",\r\n                \"ttl\": \"30\",\r\n                \"sms_stub_switch\": \"false\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"b2eca140-d1de-4fe6-b699-1b3820a040bc\",\r\n            \"alias\": \"Condition - check user attribute config Application\",\r\n            \"config\": {\r\n                \"attribute_name\": \"required_2FA\",\r\n                \"attribute_value\": \"APP##APK\",\r\n                \"native_enabled\": \"false\",\r\n                \"attribute_groups_enabled\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"1895709b-2ec2-4a92-aac4-fbc49b1ec821\",\r\n            \"alias\": \"Condition - check user attribute config Telegram\",\r\n            \"config\": {\r\n                \"attribute_name\": \"required_2FA\",\r\n                \"attribute_value\": \"TEL##TG##ТЕЛЕГА\",\r\n                \"native_enabled\": \"false\",\r\n                \"attribute_groups_enabled\": \"true\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"4ad69b7c-03ff-4d26-9ab2-88710d9d195e\",\r\n            \"alias\": \"Telegram 2FA config\",\r\n            \"config\": {\r\n                \"telegram_code_ttl\": \"30\",\r\n                \"telegram_switch\": \"true\",\r\n                \"telegram_code_length\": \"6\"\r\n            }\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8443/admin/realms/SpringBootKeycloak/migrations/flows?stamp=R38",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8443",
+                  "path": [
+                    "admin",
+                    "realms",
+                    "SpringBootKeycloak",
+                    "migrations",
+                    "flows"
+                  ],
+                  "query": [
+                    {
+                      "key": "stamp",
+                      "value": "R38"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TOKEN",
+      "item": [
+        {
+          "name": "GET Token",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "80ed92e0-9328-4344-98ec-cd9367ecc48e"
+                },
+                {
+                  "key": "client_id",
+                  "value": "account-console",
+                  "type": "text",
+                  "uuid": "3b3d6259-e38c-444f-8bca-fb89fa6f6f0e"
+                },
+                {
+                  "key": "username",
+                  "value": "alex",
+                  "type": "text",
+                  "uuid": "a2d13b09-bbaf-4822-97b9-fc2c7d60e8fb"
+                },
+                {
+                  "key": "password",
+                  "value": "alex",
+                  "type": "text",
+                  "uuid": "28c5cddf-70c1-4fc4-9bbf-1256fdd694f0"
+                },
+                {
+                  "key": "scope",
+                  "value": "openid",
+                  "type": "text",
+                  "uuid": "3871f266-9716-4b95-a882-24b0bdd05009"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8443/realms/SpringBootKeycloak/protocol/openid-connect/token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8443",
+              "path": [
+                "realms",
+                "SpringBootKeycloak",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
