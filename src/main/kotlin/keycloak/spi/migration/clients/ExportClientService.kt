@@ -1,8 +1,6 @@
 package keycloak.spi.migration.clients
 
 import jakarta.ws.rs.core.Response
-import keycloak.spi.migration.models.ClientExportDto
-import keycloak.spi.migration.models.ClientListExportDto
 import keycloak.spi.migration.utils.splitToList
 import org.jboss.logging.Logger
 import org.keycloak.authorization.AuthorizationProvider

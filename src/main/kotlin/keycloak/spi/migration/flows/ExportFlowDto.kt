@@ -1,4 +1,4 @@
-package keycloak.spi.migration.models
+package keycloak.spi.migration.flows
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import org.keycloak.representations.idm.AuthenticationFlowRepresentation

@@ -1,7 +1,6 @@
 package keycloak.spi.migration.clients
 
 import keycloak.spi.migration.constants.Constants
-import keycloak.spi.migration.models.ClientExportDto
 import org.jboss.logging.Logger
 import org.keycloak.authorization.AuthorizationProvider
 import org.keycloak.events.admin.OperationType

@@ -43,7 +43,7 @@ class ImportRealmRolesService(
                 .entity(mapOf("error" to "import role list empty")).build()
         }
 
-        logger.info(">>>> Procedure importing of Realm Roles in realm = [$realm] started")
+        logger.info(">>>> Procedure importing of Realm Roles in realm = [$realmName] started")
         val existingRolesNames =
             session.roles().getRealmRolesStream(realm)?.map { it.name }?.toList()?.toSet() ?: emptySet()
 
@@ -54,7 +54,7 @@ class ImportRealmRolesService(
             try {
                 if (existingRolesNames.contains(name)) {
                     // обновляем существующую роль
-                    updateRealRoles(importedRoleRepresentation, responseDto)
+                    updateRealmRoles(importedRoleRepresentation, responseDto)
                 } else {
                     // создаем новую роль
                     createRealmRole(importedRoleRepresentation, responseDto)
@@ -141,7 +141,7 @@ class ImportRealmRolesService(
      * @param importedRoleRepresentation сущность импортированной роли
      * @param responseDto сущность ответа метода импорта
      */
-    private fun updateRealRoles(
+    private fun updateRealmRoles(
         importedRoleRepresentation: RoleRepresentation,
         responseDto: ResponseDto
     ) {

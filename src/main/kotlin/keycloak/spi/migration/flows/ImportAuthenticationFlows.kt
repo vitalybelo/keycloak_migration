@@ -1,7 +1,6 @@
 package keycloak.spi.migration.flows
 
 import jakarta.ws.rs.core.Response
-import keycloak.spi.migration.models.ExportFlowDto
 import org.jboss.logging.Logger
 import org.keycloak.models.KeycloakSession
 import org.keycloak.representations.idm.AuthenticationExecutionExportRepresentation
@@ -40,7 +39,7 @@ class ImportAuthenticationFlows(
      */
     fun createAuthenticationFlows(
         stamp: String?,
-        importedFlowDto: ExportFlowDto
+        importedFlowDto: ImportFlowDto
     ): Response {
 
         val importedRootFlows = importedFlowDto.authenticationFlows.filter { it.isTopLevel }
@@ -127,7 +126,7 @@ class ImportAuthenticationFlows(
     private fun createAuthFlowEnvironment(
         importedParentFlow: AuthenticationFlowRepresentation,
         justCreatedParentFlow: AuthenticationFlowRepresentation,
-        importedFlowDto: ExportFlowDto
+        importedFlowDto: ImportFlowDto
     ) {
         val parentFlowId = justCreatedParentFlow.id
         val parentFlowAlias = justCreatedParentFlow.alias
@@ -178,7 +177,7 @@ class ImportAuthenticationFlows(
         flowId: String?,
         parentFlowId: String?,
         importedExecution: AuthenticationExecutionExportRepresentation,
-        importedFlowDto: ExportFlowDto
+        importedFlowDto: ImportFlowDto
     ): AuthenticationExecutionRepresentation? {
 
         var response: Response? = null
@@ -251,7 +250,7 @@ class ImportAuthenticationFlows(
      */
     private fun findImportedFlow(
         flowAlias: String,
-        importedFlowDto: ExportFlowDto
+        importedFlowDto: ImportFlowDto
     ): AuthenticationFlowRepresentation? {
 
         return importedFlowDto.authenticationFlows.firstOrNull { it.alias.equals(flowAlias) }
@@ -267,7 +266,7 @@ class ImportAuthenticationFlows(
      */
     private fun findImportedConfig(
         authenticatorConfigName: String,
-        flowImportDto: ExportFlowDto
+        flowImportDto: ImportFlowDto
     ): AuthenticatorConfigRepresentation? {
 
         return flowImportDto.authenticatorConfigs

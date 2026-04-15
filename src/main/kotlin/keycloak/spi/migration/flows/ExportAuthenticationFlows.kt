@@ -1,7 +1,6 @@
 package keycloak.spi.migration.flows
 
 import jakarta.ws.rs.core.Response
-import keycloak.spi.migration.models.CollectFlowDto
 import keycloak.spi.migration.utils.splitToList
 import org.jboss.logging.Logger
 import org.keycloak.models.KeycloakSession

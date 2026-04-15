@@ -658,7 +658,6 @@
   }, {
     "id" : "b6c1bf28-ba55-423c-99f0-3833b3762cf8",
     "name" : "root_parent",
-    "description" : "",
     "path" : "/root_parent",
     "subGroups" : [ {
       "id" : "fa13b396-d2d3-4d6a-a04b-61afbcb6bba8",
@@ -1268,7 +1267,7 @@
         "jsonType.label" : "String"
       }
     } ],
-    "defaultClientScopes" : [ "abscustId", "roles", "profile", "web-origins", "acr", "phone", "position", "department", "basic", "session_state", "required_2FA", "enterTime", "group_attribute", "email" ],
+    "defaultClientScopes" : [ "abscustId", "profile", "roles", "web-origins", "acr", "phone", "position", "department", "basic", "session_state", "required_2FA", "group_attribute", "enterTime", "email" ],
     "optionalClientScopes" : [ "address", "offline_access", "microprofile-jwt" ]
   }, {
     "id" : "d3e1ba5e-f9f3-43ef-9de1-5c2e814fdb62",
@@ -2186,7 +2185,7 @@
   "eventsEnabled" : true,
   "eventsExpiration" : 1800,
   "eventsListeners" : [ "custom-event-listener", "jboss-logging" ],
-  "enabledEventTypes" : [ "UPDATE_CONSENT_ERROR", "SEND_RESET_PASSWORD", "GRANT_CONSENT", "VERIFY_PROFILE_ERROR", "UPDATE_TOTP", "REMOVE_TOTP", "REVOKE_GRANT", "LOGIN_ERROR", "CLIENT_LOGIN", "RESET_PASSWORD_ERROR", "UPDATE_CREDENTIAL", "IMPERSONATE_ERROR", "CODE_TO_TOKEN_ERROR", "CUSTOM_REQUIRED_ACTION", "OAUTH2_DEVICE_CODE_TO_TOKEN_ERROR", "RESTART_AUTHENTICATION", "UPDATE_PROFILE_ERROR", "IMPERSONATE", "LOGIN", "UPDATE_PASSWORD_ERROR", "OAUTH2_DEVICE_VERIFY_USER_CODE", "CLIENT_INITIATED_ACCOUNT_LINKING", "USER_DISABLED_BY_PERMANENT_LOCKOUT", "OAUTH2_EXTENSION_GRANT", "REMOVE_CREDENTIAL_ERROR", "TOKEN_EXCHANGE", "REGISTER", "LOGOUT", "AUTHREQID_TO_TOKEN", "DELETE_ACCOUNT_ERROR", "CLIENT_REGISTER", "IDENTITY_PROVIDER_LINK_ACCOUNT", "USER_DISABLED_BY_TEMPORARY_LOCKOUT", "UPDATE_PASSWORD", "DELETE_ACCOUNT", "FEDERATED_IDENTITY_LINK_ERROR", "CLIENT_DELETE", "IDENTITY_PROVIDER_FIRST_LOGIN", "VERIFY_EMAIL", "CLIENT_DELETE_ERROR", "CLIENT_LOGIN_ERROR", "RESTART_AUTHENTICATION_ERROR", "REMOVE_FEDERATED_IDENTITY_ERROR", "EXECUTE_ACTIONS", "TOKEN_EXCHANGE_ERROR", "PERMISSION_TOKEN", "FEDERATED_IDENTITY_OVERRIDE_LINK", "SEND_IDENTITY_PROVIDER_LINK_ERROR", "UPDATE_CREDENTIAL_ERROR", "EXECUTE_ACTION_TOKEN_ERROR", "SEND_VERIFY_EMAIL", "OAUTH2_EXTENSION_GRANT_ERROR", "OAUTH2_DEVICE_AUTH", "EXECUTE_ACTIONS_ERROR", "REMOVE_FEDERATED_IDENTITY", "OAUTH2_DEVICE_CODE_TO_TOKEN", "IDENTITY_PROVIDER_POST_LOGIN", "IDENTITY_PROVIDER_LINK_ACCOUNT_ERROR", "FEDERATED_IDENTITY_OVERRIDE_LINK_ERROR", "UPDATE_EMAIL", "OAUTH2_DEVICE_VERIFY_USER_CODE_ERROR", "REGISTER_ERROR", "REVOKE_GRANT_ERROR", "LOGOUT_ERROR", "UPDATE_EMAIL_ERROR", "EXECUTE_ACTION_TOKEN", "CLIENT_UPDATE_ERROR", "UPDATE_PROFILE", "AUTHREQID_TO_TOKEN_ERROR", "INVITE_ORG_ERROR", "FEDERATED_IDENTITY_LINK", "CLIENT_REGISTER_ERROR", "INVITE_ORG", "SEND_VERIFY_EMAIL_ERROR", "SEND_IDENTITY_PROVIDER_LINK", "RESET_PASSWORD", "CLIENT_INITIATED_ACCOUNT_LINKING_ERROR", "OAUTH2_DEVICE_AUTH_ERROR", "REMOVE_CREDENTIAL", "UPDATE_CONSENT", "REMOVE_TOTP_ERROR", "VERIFY_EMAIL_ERROR", "SEND_RESET_PASSWORD_ERROR", "CLIENT_UPDATE", "CUSTOM_REQUIRED_ACTION_ERROR", "IDENTITY_PROVIDER_POST_LOGIN_ERROR", "UPDATE_TOTP_ERROR", "VERIFY_PROFILE", "CODE_TO_TOKEN", "GRANT_CONSENT_ERROR", "IDENTITY_PROVIDER_FIRST_LOGIN_ERROR" ],
+  "enabledEventTypes" : [ "SEND_RESET_PASSWORD", "UPDATE_CONSENT_ERROR", "GRANT_CONSENT", "VERIFY_PROFILE_ERROR", "REMOVE_TOTP", "REVOKE_GRANT", "UPDATE_TOTP", "LOGIN_ERROR", "CLIENT_LOGIN", "RESET_PASSWORD_ERROR", "UPDATE_CREDENTIAL", "IMPERSONATE_ERROR", "CODE_TO_TOKEN_ERROR", "CUSTOM_REQUIRED_ACTION", "OAUTH2_DEVICE_CODE_TO_TOKEN_ERROR", "RESTART_AUTHENTICATION", "IMPERSONATE", "UPDATE_PROFILE_ERROR", "LOGIN", "OAUTH2_DEVICE_VERIFY_USER_CODE", "UPDATE_PASSWORD_ERROR", "CLIENT_INITIATED_ACCOUNT_LINKING", "OAUTH2_EXTENSION_GRANT", "USER_DISABLED_BY_PERMANENT_LOCKOUT", "REMOVE_CREDENTIAL_ERROR", "TOKEN_EXCHANGE", "AUTHREQID_TO_TOKEN", "LOGOUT", "REGISTER", "DELETE_ACCOUNT_ERROR", "CLIENT_REGISTER", "IDENTITY_PROVIDER_LINK_ACCOUNT", "USER_DISABLED_BY_TEMPORARY_LOCKOUT", "DELETE_ACCOUNT", "UPDATE_PASSWORD", "CLIENT_DELETE", "FEDERATED_IDENTITY_LINK_ERROR", "IDENTITY_PROVIDER_FIRST_LOGIN", "CLIENT_DELETE_ERROR", "VERIFY_EMAIL", "CLIENT_LOGIN_ERROR", "RESTART_AUTHENTICATION_ERROR", "EXECUTE_ACTIONS", "REMOVE_FEDERATED_IDENTITY_ERROR", "TOKEN_EXCHANGE_ERROR", "PERMISSION_TOKEN", "FEDERATED_IDENTITY_OVERRIDE_LINK", "SEND_IDENTITY_PROVIDER_LINK_ERROR", "UPDATE_CREDENTIAL_ERROR", "EXECUTE_ACTION_TOKEN_ERROR", "OAUTH2_EXTENSION_GRANT_ERROR", "SEND_VERIFY_EMAIL", "OAUTH2_DEVICE_AUTH", "EXECUTE_ACTIONS_ERROR", "REMOVE_FEDERATED_IDENTITY", "OAUTH2_DEVICE_CODE_TO_TOKEN", "IDENTITY_PROVIDER_POST_LOGIN", "IDENTITY_PROVIDER_LINK_ACCOUNT_ERROR", "FEDERATED_IDENTITY_OVERRIDE_LINK_ERROR", "OAUTH2_DEVICE_VERIFY_USER_CODE_ERROR", "UPDATE_EMAIL", "REGISTER_ERROR", "REVOKE_GRANT_ERROR", "EXECUTE_ACTION_TOKEN", "LOGOUT_ERROR", "UPDATE_EMAIL_ERROR", "CLIENT_UPDATE_ERROR", "AUTHREQID_TO_TOKEN_ERROR", "INVITE_ORG_ERROR", "UPDATE_PROFILE", "CLIENT_REGISTER_ERROR", "FEDERATED_IDENTITY_LINK", "INVITE_ORG", "SEND_IDENTITY_PROVIDER_LINK", "SEND_VERIFY_EMAIL_ERROR", "RESET_PASSWORD", "CLIENT_INITIATED_ACCOUNT_LINKING_ERROR", "OAUTH2_DEVICE_AUTH_ERROR", "REMOVE_CREDENTIAL", "UPDATE_CONSENT", "REMOVE_TOTP_ERROR", "VERIFY_EMAIL_ERROR", "SEND_RESET_PASSWORD_ERROR", "CLIENT_UPDATE", "CUSTOM_REQUIRED_ACTION_ERROR", "IDENTITY_PROVIDER_POST_LOGIN_ERROR", "UPDATE_TOTP_ERROR", "CODE_TO_TOKEN", "VERIFY_PROFILE", "GRANT_CONSENT_ERROR", "IDENTITY_PROVIDER_FIRST_LOGIN_ERROR" ],
   "adminEventsEnabled" : true,
   "adminEventsDetailsEnabled" : true,
   "identityProviders" : [ ],
@@ -2234,7 +2233,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-full-name-mapper", "oidc-usermodel-property-mapper", "saml-user-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-address-mapper", "oidc-usermodel-attribute-mapper", "saml-role-list-mapper", "saml-user-property-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-full-name-mapper", "saml-role-list-mapper", "oidc-usermodel-attribute-mapper", "saml-user-property-mapper", "saml-user-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "oidc-address-mapper" ]
       }
     }, {
       "id" : "933c0e42-0cc0-42e7-a26e-e2178b2b06fb",
@@ -2259,7 +2258,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-address-mapper", "oidc-usermodel-attribute-mapper", "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-full-name-mapper", "oidc-usermodel-property-mapper", "saml-role-list-mapper", "saml-user-attribute-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-address-mapper", "oidc-full-name-mapper", "oidc-usermodel-property-mapper", "saml-user-attribute-mapper", "oidc-usermodel-attribute-mapper", "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-role-list-mapper" ]
       }
     } ],
     "org.keycloak.userprofile.UserProfileProvider" : [ {
@@ -2375,8 +2374,31 @@
       "userSetupAllowed" : false
     } ]
   }, {
+    "id" : "d65080c8-9154-420e-ba3d-97a50ea0fc5e",
+    "alias" : "Browser - Telegram - 2FA forms",
+    "description" : "Username, password, otp and other auth forms.",
+    "providerId" : "basic-flow",
+    "topLevel" : false,
+    "builtIn" : false,
+    "authenticationExecutions" : [ {
+      "authenticator" : "auth-username-password-form",
+      "authenticatorFlow" : false,
+      "requirement" : "REQUIRED",
+      "priority" : 10,
+      "autheticatorFlow" : false,
+      "userSetupAllowed" : false
+    }, {
+      "authenticatorConfig" : "Telegram 2FA config mono",
+      "authenticator" : "telegram-authenticator",
+      "authenticatorFlow" : false,
+      "requirement" : "REQUIRED",
+      "priority" : 11,
+      "autheticatorFlow" : false,
+      "userSetupAllowed" : false
+    } ]
+  }, {
     "id" : "6f90abf8-46a6-4fb6-a1da-9f966ac27742",
-    "alias" : "Browser - Telegram - 2FA",
+    "alias" : "Browser - Telegram 2FA",
     "description" : "browser based authentication",
     "providerId" : "basic-flow",
     "topLevel" : true,
@@ -2408,29 +2430,6 @@
       "priority" : 30,
       "autheticatorFlow" : true,
       "flowAlias" : "Browser - Telegram - 2FA forms",
-      "userSetupAllowed" : false
-    } ]
-  }, {
-    "id" : "d65080c8-9154-420e-ba3d-97a50ea0fc5e",
-    "alias" : "Browser - Telegram - 2FA forms",
-    "description" : "Username, password, otp and other auth forms.",
-    "providerId" : "basic-flow",
-    "topLevel" : false,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticator" : "auth-username-password-form",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 10,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorConfig" : "Telegram 2FA config mono",
-      "authenticator" : "telegram-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 11,
-      "autheticatorFlow" : false,
       "userSetupAllowed" : false
     } ]
   }, {
@@ -2470,42 +2469,6 @@
       "userSetupAllowed" : false
     } ]
   }, {
-    "id" : "1bf4ac1a-81a3-4fc2-95ba-9b827abb9e42",
-    "alias" : "Browser - Telegram 2FA - Trusted Device ALTERNATIVE R38 migrated",
-    "description" : "browser based authentication alternative",
-    "providerId" : "basic-flow",
-    "topLevel" : true,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticator" : "auth-cookie",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 10,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticator" : "auth-spnego",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 20,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticator" : "identity-provider-redirector",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 25,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorFlow" : true,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 30,
-      "autheticatorFlow" : true,
-      "flowAlias" : "Browser Advanced Flow R38 migrated",
-      "userSetupAllowed" : false
-    } ]
-  }, {
     "id" : "b254d857-c18f-471e-aad7-b05e46d4f307",
     "alias" : "Browser - Telegram 2FA - Trusted Device CONDITIONAL",
     "description" : "browser based authentication conditional",
@@ -2540,42 +2503,6 @@
       "priority" : 26,
       "autheticatorFlow" : true,
       "flowAlias" : "Username Password - Trusted Device - Telegram 2FA - Conditional",
-      "userSetupAllowed" : false
-    } ]
-  }, {
-    "id" : "7ce2bd2b-2667-4052-9842-e8cead96dabd",
-    "alias" : "Browser - Telegram 2FA - Trusted Device CONDITIONAL R38 migrated",
-    "description" : "browser based authentication conditional",
-    "providerId" : "basic-flow",
-    "topLevel" : true,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticator" : "auth-cookie",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 10,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticator" : "auth-spnego",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 20,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticator" : "identity-provider-redirector",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 25,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorFlow" : true,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 26,
-      "autheticatorFlow" : true,
-      "flowAlias" : "Username Password - Trusted Device - Telegram 2FA - Conditional R38 migrated",
       "userSetupAllowed" : false
     } ]
   }, {
@@ -2743,36 +2670,6 @@
       "userSetupAllowed" : false
     }, {
       "authenticatorConfig" : "Remember Device Form config uno",
-      "authenticator" : "remember-device-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 12,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    } ]
-  }, {
-    "id" : "49cd97c5-8904-40f6-9f02-17e9005cbdc8",
-    "alias" : "Browser Advanced Flow R38 migrated",
-    "description" : "Username, password, otp and other auth forms.",
-    "providerId" : "basic-flow",
-    "topLevel" : false,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticator" : "auth-username-password-form",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 10,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorFlow" : true,
-      "requirement" : "REQUIRED",
-      "priority" : 11,
-      "autheticatorFlow" : true,
-      "flowAlias" : "Trusted Device - Telegram 2FA - Alternative R38 migrated",
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorConfig" : "Remember Device Form config uno R38 migrated",
       "authenticator" : "remember-device-authenticator",
       "authenticatorFlow" : false,
       "requirement" : "REQUIRED",
@@ -3142,30 +3039,6 @@
       "userSetupAllowed" : false
     } ]
   }, {
-    "id" : "3ecdde1a-6d44-4daa-b39b-6e342d7d2191",
-    "alias" : "Trusted Device - Telegram 2FA - Alternative R38 migrated",
-    "description" : "",
-    "providerId" : "basic-flow",
-    "topLevel" : false,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticatorConfig" : "Trusted Device Checker config R38 migrated",
-      "authenticator" : "trusted-device-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 0,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorConfig" : "Telegram 2FA config uno R38 migrated",
-      "authenticator" : "telegram-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "ALTERNATIVE",
-      "priority" : 1,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    } ]
-  }, {
     "id" : "ef13ac5c-dfbd-46de-87cf-55f8d66096fa",
     "alias" : "Trusted Device - Telegram 2FA - Conditional",
     "description" : "",
@@ -3174,29 +3047,6 @@
     "builtIn" : false,
     "authenticationExecutions" : [ {
       "authenticatorConfig" : "Condition - Device is NOT Trusted config",
-      "authenticator" : "conditional-trusted-device",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 0,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticator" : "telegram-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 1,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    } ]
-  }, {
-    "id" : "36a16cbd-f392-497a-a796-5054ffc46067",
-    "alias" : "Trusted Device - Telegram 2FA - Conditional R38 migrated",
-    "description" : "",
-    "providerId" : "basic-flow",
-    "topLevel" : false,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticatorConfig" : "Condition - Device is NOT Trusted config R38 migrated",
       "authenticator" : "conditional-trusted-device",
       "authenticatorFlow" : false,
       "requirement" : "REQUIRED",
@@ -3257,36 +3107,6 @@
       "userSetupAllowed" : false
     }, {
       "authenticatorConfig" : "Remember Device Form config Conditional",
-      "authenticator" : "remember-device-authenticator",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 2,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    } ]
-  }, {
-    "id" : "b898867a-839d-4601-923b-e67ccdf2d892",
-    "alias" : "Username Password - Trusted Device - Telegram 2FA - Conditional R38 migrated",
-    "description" : "",
-    "providerId" : "basic-flow",
-    "topLevel" : false,
-    "builtIn" : false,
-    "authenticationExecutions" : [ {
-      "authenticator" : "auth-username-password-form",
-      "authenticatorFlow" : false,
-      "requirement" : "REQUIRED",
-      "priority" : 0,
-      "autheticatorFlow" : false,
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorFlow" : true,
-      "requirement" : "CONDITIONAL",
-      "priority" : 1,
-      "autheticatorFlow" : true,
-      "flowAlias" : "Trusted Device - Telegram 2FA - Conditional R38 migrated",
-      "userSetupAllowed" : false
-    }, {
-      "authenticatorConfig" : "Remember Device Form config Conditional R38 migrated",
       "authenticator" : "remember-device-authenticator",
       "authenticatorFlow" : false,
       "requirement" : "REQUIRED",
@@ -3614,13 +3434,6 @@
       "trusted_device_delete" : "false"
     }
   }, {
-    "id" : "d014fcab-da3d-4a04-9474-354677dd18e2",
-    "alias" : "Condition - Device is NOT Trusted config R38 migrated",
-    "config" : {
-      "trusted_device_switch" : "false",
-      "trusted_device_delete" : "false"
-    }
-  }, {
     "id" : "43ac6af3-417f-4794-a7e8-004d1ac15526",
     "alias" : "Condition - check user attribute config",
     "config" : {
@@ -3767,24 +3580,8 @@
       "remember_cookie_ttl" : "30"
     }
   }, {
-    "id" : "79cd79bd-e69a-4bba-8f98-859f5c6ddef2",
-    "alias" : "Remember Device Form config Conditional R38 migrated",
-    "config" : {
-      "remember_recovery_swith" : "true",
-      "remember_switch" : "true",
-      "remember_cookie_ttl" : "30"
-    }
-  }, {
     "id" : "bb8ae1d0-b96f-425d-8d4a-45b4450f3248",
     "alias" : "Remember Device Form config uno",
-    "config" : {
-      "remember_recovery_swith" : "true",
-      "remember_switch" : "true",
-      "remember_cookie_ttl" : "30"
-    }
-  }, {
-    "id" : "5a6fa852-ffac-4ab5-af7e-4e979d872337",
-    "alias" : "Remember Device Form config uno R38 migrated",
     "config" : {
       "remember_recovery_swith" : "true",
       "remember_switch" : "true",
@@ -3823,23 +3620,8 @@
       "telegram_code_length" : "6"
     }
   }, {
-    "id" : "80683587-2168-40e0-ad62-b52985746966",
-    "alias" : "Telegram 2FA config uno R38 migrated",
-    "config" : {
-      "telegram_code_ttl" : "60",
-      "telegram_switch" : "true",
-      "telegram_code_length" : "6"
-    }
-  }, {
     "id" : "0505e09d-a63d-4211-a56a-faa5a0ff3670",
     "alias" : "Trusted Device Checker config",
-    "config" : {
-      "trusted_device_switch" : "false",
-      "trusted_device_delete" : "false"
-    }
-  }, {
-    "id" : "fc2d7e12-ad16-4e63-8fbf-7ed8790d95b4",
-    "alias" : "Trusted Device Checker config R38 migrated",
     "config" : {
       "trusted_device_switch" : "false",
       "trusted_device_delete" : "false"

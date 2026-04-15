@@ -2,8 +2,6 @@ package keycloak.spi.migration.clients
 
 import jakarta.ws.rs.core.Response
 import keycloak.spi.migration.constants.Constants.Companion.FORMATTER
-import keycloak.spi.migration.models.ClientImportResponseDto
-import keycloak.spi.migration.models.ClientListExportDto
 import org.jboss.logging.Logger
 import org.keycloak.models.KeycloakSession
 import org.keycloak.models.RealmModel

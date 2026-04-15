@@ -11,14 +11,18 @@ import jakarta.ws.rs.core.MediaType
 import jakarta.ws.rs.core.Response
 import keycloak.spi.migration.clients.ExportClientService
 import keycloak.spi.migration.clients.ImportClientService
+import keycloak.spi.migration.configuration.ExportRealmConfiguration
+import keycloak.spi.migration.configuration.ImportRealmConfiguration
+import keycloak.spi.migration.configuration.RealmExportConditions
+import keycloak.spi.migration.configuration.RealmImportConditions
 import keycloak.spi.migration.flows.ExportAuthenticationFlows
 import keycloak.spi.migration.flows.ImportAuthenticationFlows
 import keycloak.spi.migration.groups.ExportGroupsService
 import keycloak.spi.migration.scopes.ClientScopeExportDto
 import keycloak.spi.migration.scopes.ImportClientScopeService
 import keycloak.spi.migration.groups.ImportGroupsService
-import keycloak.spi.migration.models.ClientListExportDto
-import keycloak.spi.migration.models.ExportFlowDto
+import keycloak.spi.migration.clients.ClientListExportDto
+import keycloak.spi.migration.flows.ImportFlowDto
 import keycloak.spi.migration.roles.ExportRealmRolesService
 import keycloak.spi.migration.roles.ImportRealmRolesService
 import keycloak.spi.migration.scopes.ExportClientScopeService
@@ -26,6 +30,7 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody
 import org.keycloak.models.KeycloakSession
 import org.keycloak.models.RealmModel
 import org.keycloak.representations.idm.GroupRepresentation
+import org.keycloak.representations.idm.RealmRepresentation
 import org.keycloak.representations.idm.RoleRepresentation
 import org.keycloak.services.resources.admin.AdminEventBuilder
 import org.keycloak.services.resources.admin.fgap.AdminPermissionEvaluator
@@ -158,12 +163,72 @@ class MigrationAdminResource(
     @Produces(MediaType.APPLICATION_JSON)
     fun createAuthenticationFlows(
         @QueryParam("stamp") stamp: String?,
-        @RequestBody importedFlowDto: ExportFlowDto
+        @RequestBody importedFlowDto: ImportFlowDto
     ): Response {
 
         auth.clients().requireManage()
         val authFlowImportService = ImportAuthenticationFlows(session, auth, adminEventBuilder)
         return authFlowImportService.createAuthenticationFlows(stamp, importedFlowDto)
     }
+
+    @GET
+    @Path("/configuration")
+    @Consumes(MediaType.APPLICATION_JSON)
+    fun getRealmConfiguration(
+        @QueryParam(value = "isMigrateRealmRoles") isMigrateRealmRoles: Boolean?,
+        @QueryParam(value = "isMigrateClientScopes") isMigrateClientScopes: Boolean?,
+        @QueryParam(value = "isMigrateRealmGroups") isMigrateRealmGroups: Boolean?,
+        @QueryParam(value = "isMigrateFlows") isMigrateFlows: Boolean?
+    ): Response {
+
+        auth.clients().requireView() // хотя внутри тоже есть проверка, первичная остановит сразу
+
+        val exportConfigService = ExportRealmConfiguration(session, realm)
+        return exportConfigService.getRealmConfiguration(
+            RealmExportConditions().apply {
+                this.isMigrateRealmRoles = isMigrateRealmRoles ?: false
+                this.isMigrateClientScopes = isMigrateClientScopes ?: false
+                this.isMigrateRealmGroups = isMigrateRealmGroups ?: false
+                this.isMigrateFlows = isMigrateFlows ?: false
+            })
+    }
+
+    @POST
+    @Path("/configuration")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    fun createOrUpdateRealmConfiguration(
+        @QueryParam(value = "isMigrateRealmRoles") isMigrateRealmRoles: Boolean?,
+        @QueryParam(value = "isMigrateClientScopes") isMigrateClientScopes: Boolean?,
+        @QueryParam(value = "isMigrateRealmGroups") isMigrateRealmGroups: Boolean?,
+        @QueryParam(value = "isMigrateFlows") isMigrateFlows: Boolean?,
+        @QueryParam(value = "realm") realmName: String?,
+        @RequestBody realmConfiguration: RealmRepresentation?
+    ): Response {
+
+        auth.clients().requireManage() // хотя внутри тоже есть проверка, первичная остановит сразу
+
+        if (realmName.isNullOrEmpty()) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                .entity("error" to "new realm name should be provided").build()
+        }
+        if (realmConfiguration == null) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                .entity("error" to "realm representation should be provided").build()
+        }
+
+        val importConfigService = ImportRealmConfiguration(session, auth, adminEventBuilder)
+        return importConfigService.importRealmConfiguration(
+            realmName,
+            RealmImportConditions().apply {
+                this.isMigrateRealmRoles = isMigrateRealmRoles ?: false
+                this.isMigrateClientScopes = isMigrateClientScopes ?: false
+                this.isMigrateRealmGroups = isMigrateRealmGroups ?: false
+                this.isMigrateFlows = isMigrateFlows ?: false
+            },
+            realmConfiguration
+        )
+    }
+
 
 }

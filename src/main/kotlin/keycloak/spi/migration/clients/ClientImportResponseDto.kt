@@ -1,4 +1,4 @@
-package keycloak.spi.migration.models
+package keycloak.spi.migration.clients
 
 import org.keycloak.representations.idm.ClientRepresentation
 

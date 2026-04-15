@@ -16,4 +16,8 @@ data class ClientScopeExportDto(
     @JsonProperty("optional")
     var optionalScopes: List<String>? = null
 
-)
+) {
+    fun isClientScopesImportPossible(): Boolean {
+        return !clientScopes.isNullOrEmpty()
+    }
+}
