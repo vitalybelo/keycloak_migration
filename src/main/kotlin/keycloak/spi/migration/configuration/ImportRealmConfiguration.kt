@@ -8,6 +8,8 @@ import keycloak.spi.migration.roles.ImportRealmRolesService
 import keycloak.spi.migration.scopes.ClientScopeExportDto
 import keycloak.spi.migration.scopes.ImportClientScopeService
 import org.jboss.logging.Logger
+import org.keycloak.events.admin.OperationType
+import org.keycloak.events.admin.ResourceType
 import org.keycloak.models.KeycloakSession
 import org.keycloak.models.RealmModel
 import org.keycloak.models.utils.KeycloakModelUtils
@@ -124,6 +126,14 @@ class ImportRealmConfiguration(
                 // manager.importRealm сделает всю магию: создаст запись, накатит настройки,
                 val newRealm = manager.importRealm(importedRepresentation)
                 logger.info(">>>> Successfully created realm = [$importRealmName] configuration")
+
+                // Аудит: Фиксируем создание нового Realm
+                adminEventBuilder.operation(OperationType.CREATE)
+                    .resource(ResourceType.REALM)
+                    .resourcePath("")
+                    .representation(importedRepresentation)
+                    .success()
+
                 return newRealm
 
             } else {
@@ -134,6 +144,14 @@ class ImportRealmConfiguration(
                 // Используем RepresentationToModel для наката настроек на существующую модель
                 RepresentationToModel.updateRealm(importedRepresentation, existingRealmModel, session)
                 logger.info(">>>> Successfully updated realm [$importRealmName] configuration via SPI")
+
+                // Аудит: Фиксируем обновление существующего Realm
+                adminEventBuilder.operation(OperationType.UPDATE)
+                    .resource(ResourceType.REALM)
+                    .resourcePath("")
+                    .representation(importedRepresentation)
+                    .success()
+
                 return existingRealmModel
             }
 
@@ -144,7 +162,7 @@ class ImportRealmConfiguration(
     }
 
     /**
-     * Обнуляет названия назначенных по умолчанию потоков аутентификации
+     * Обнуляет названия назначенных по умолчанию потоков аутентификации (keycloak сам их создаст)
      * @param importedRepresentation новая сущность области сервисов
      */
     private fun cleanAssignedFlowNames(
@@ -161,8 +179,8 @@ class ImportRealmConfiguration(
 
     /**
      * Создает новые или перезаписывает существующие компоненты в настройках области сервисов
-     * При создании новой области - нужно обнулить все id в импортных сущностях компонентов. То
-     * же самое мы делаем если в существующей области вообще нет провайдеров с компонентами.
+     * При создании новой области - нужно обнулить все id в импортных сущностях компонентов.
+     * То же самое мы делаем если в существующей области вообще нет провайдеров с компонентами.
      * Когда в обновляемой области существует похожий провайдер с найдем набором компонентов,
      * мы будем проверять существование конкретного компонента, и если не найдем, тогда id = null.
      * Если в существующей области мы найдем конкретный провайдер - подставим его id в импортный.
